@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Vocabular {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  grundform String @unique
+  hilfsverben String
+  uebersetzung String
+  present String[]
+  imparfait String[]
+  future_simple String[]
+  conditionnel_present String[]
+  passe_compose String[]
+  plus_que_parfait String[]
+}

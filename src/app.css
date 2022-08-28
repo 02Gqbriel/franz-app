@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	* {
+		font-family: 'Poppins', Arial, Helvetica, sans-serif;
+		text-rendering: optimizeSpeed;
+		color: #2d2d2d;
+		opacity: 0.99;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		@apply leading-relaxed tracking-wide font-medium transition-all duration-300 accent-purple-600;
+	}
+
+	label {
+		user-select: none;
+		@apply cursor-pointer;
+	}
+
+	input {
+		@apply cursor-auto;
+	}
+
+	::-moz-selection {
+		@apply bg-purple-600 text-soft-white;
+	}
+
+	::selection {
+		@apply bg-purple-600 text-soft-white;
+	}
+}
+
+@layer components {
+	[type='checkbox'],
+	[type='radio'],
+	[type='text'],
+	[type='password'] {
+		@apply text-purple-600;
+	}
+
+	[type='checkbox']:focus,
+	[type='radio']:focus,
+	[type='text']:focus,
+	[type='password']:focus {
+		@apply ring-purple-600;
+	}
+
+	[type='text']:focus,
+	[type='text'],
+	[type='password']:focus,
+	[type='password'] {
+		@apply border-purple-600;
+	}
+}

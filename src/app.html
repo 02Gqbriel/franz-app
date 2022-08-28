@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<script>
+			var exports = {};
+		</script>
+		<link
+			rel="preload"
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+			as="style"
+		/>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		%sveltekit.head%
 	</head>
-	<body>
-		<div>%sveltekit.body%</div>
+	<body class="bg-soft-white">
+		<div
+			class="max-w-screen-lg min-h-screen mx-auto p-3 flex flex-col justify-between"
+		>
+			%sveltekit.body%
+		</div>
 	</body>
 </html>
